@@ -1,1 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Definir las variables */
+:root{
+    --fuente-principal: "Comfortaa", sans-serif;
+    --fuente-titulos: "Bevan", serif;
+
+    --oscuro: #d8e0d6;
+    --principal: #e9fae4;
+    --secundario: #45b628;
+    --secundario-oscuro: #36921f;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+}
+
+/* Globales */
+body{background-color: var(--blanco);}
+
+a,p,legend,label,li,input{
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+    color: var(--negro);
+}
+
+h1,h2,h3{
+    font-family: var(--fuente-principal);
+    font-weight:900;
+}
+
+a{text-decoration: none;}
+
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    width: min(90%, 120rem);
+    margin: 0 auto;
+    background-color: var(--principal);
+    border-radius: 0.6rem;
+}
+
+.subtitulo{
+    color: var(--secundario);
+}
+
+.boton{
+    background-color: var(--secundario);
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+    padding: 0.7rem 0;
+    font-weight: bold;
+    color: var(--blanco);
+    width: 90%;
+}
+
+.boton:hover{
+    cursor: pointer;
+    background-color: var(--secundario-oscuro);
+}
+
+@media (min-width: 880px) {
+    .boton{
+        max-width: 20%;
+    }
+}
+
+.listado, .formulario{
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+/* Animaciones */
+
+@keyframes fadeInHeader {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutHeader {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-50px); }
+}
+
+@keyframes slideInLogo {
+    from { transform: translateX(-50px); }
+    to { transform: translateX(0); }
+}

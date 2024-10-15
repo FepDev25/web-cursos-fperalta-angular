@@ -1,0 +1,45 @@
+<section class="contenedor">
+    <div id="crearcurso" class="formulario">
+        <h2>Agregar un nuevo curso:</h2>
+        <form>
+            <fieldset>
+                <legend>Llena los siguientes campos para agregar un nuevo curso</legend>
+
+                <div class="contenedor-campos">
+
+                    <div class="ingresos-cortos">
+                        <div class="campo">
+                            <label>Nombre del curso</label>
+                            <input placeholder="Ej: Electrónica" class="input-text" type="text">
+                        </div>
+
+                        <div class="campo">
+                            <label>Nombre del instructor</label>
+                            <input placeholder="Nombre del instructor" class="input-text" type="text">
+                        </div>
+
+                        <div class="campo">
+                            <label>Fecha de inicio</label>
+                            <input class="input-text" type="date">
+                        </div>
+                        
+                        <div class="campo">
+                            <label>Fecha de fin</label>
+                            <input class="input-text" type="date">
+                        </div>
+
+                    </div>
+
+                    <div class="campo">
+                        <label>Descripción</label>
+                        <textarea placeholder="Descripción del curso (al menos 30 caracteres)" class="descripcion-textarea input-text"></textarea>
+                    </div>
+
+                    <input class="boton" type="submit" value="Agregar">
+                    <p class="error"></p>
+
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,74 @@
+
+/* Formulario nuevo curso */
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend {
+    text-align: center;
+    color: var(--secundario-oscuro);
+    margin-bottom: 20px;
+}
+
+.input-text,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--secundario);
+    border-radius: 5px;
+    font-family: var(--fuente-principal);
+}
+
+label{
+    color: var(--secundario-oscuro);
+}
+
+.campo{
+    padding: 0.5rem;
+}
+
+.input-text:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--secundario-oscuro);
+    box-shadow: 0 0 5px rgba(69, 182, 40, 0.5);
+}
+
+.descripcion-textarea{
+    width: 100%;
+    height: 10rem;
+}
+
+@media (min-width: 720px) {
+    .ingresos-cortos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .campo{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+/* Boton de mensaje de error */
+.error {
+    color: #ff0000; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    margin-top: 10px; 
+    display: none; 
+    background-color: #ffe6e6; 
+    padding: 10px; 
+    border: 1px solid #ff0000; 
+    border-radius: 5px;
+    text-align: center;
+}

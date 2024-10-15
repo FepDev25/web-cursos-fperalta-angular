@@ -1,0 +1,50 @@
+
+/* Listado de cursos */
+
+.curso:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--secundario-oscuro);
+}
+
+
+@media (min-width: 768px) {
+    .cursos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .curso{
+        margin: 0.5rem;
+    }
+}
+
+.curso{
+    background-color: var(--oscuro);
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+
+.curo-caracteristica {
+    font-weight: bold;
+    color: var(--secundario-oscuro);
+}
+
+
+.curso-mostrar-info {
+    background-color: var(--secundario);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--blanco);
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.curso-mostrar-info:hover {
+    font-size: 1.3rem;
+    transform: scale(1.02);
+}
+
