@@ -10,7 +10,7 @@
 @media (min-width: 768px) {
     .cursos{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .curso{
@@ -19,20 +19,21 @@
 }
 
 .curso{
-    background-color: var(--oscuro);
+    background-color: var(--blanco);
     margin-bottom: 1rem;
     border-radius: 0.5rem;
     padding: 0.5rem;
+    border: 1px solid var(--secundario);
 }
 
 
-.curo-caracteristica {
+.curso-caracteristica {
     font-weight: bold;
     color: var(--secundario-oscuro);
 }
 
 
-.curso-mostrar-info {
+.boton-general {
     background-color: var(--secundario);
     border-radius: 10px;
     text-align: center;
@@ -43,8 +44,22 @@
     transition: all 0.3s ease-in-out;
 }
 
-.curso-mostrar-info:hover {
+.boton-general:hover {
     font-size: 1.3rem;
     transform: scale(1.02);
 }
 
+.boton-verde{
+    background-color: var(--secundario);
+}
+
+.boton-rojo{
+    background-color: #d80505;
+}
+
+
+.botones{
+    display: flex;
+    gap: 0.3rem;
+    justify-content: left;
+}

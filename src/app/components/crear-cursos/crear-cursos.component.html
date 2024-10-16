@@ -10,33 +10,33 @@
                     <div class="ingresos-cortos">
                         <div class="campo">
                             <label>Nombre del curso</label>
-                            <input placeholder="Ej: Electrónica" class="input-text" type="text">
+                            <input #nombreCurso placeholder="Ej: Electrónica" class="input-text" type="text">
                         </div>
 
                         <div class="campo">
                             <label>Nombre del instructor</label>
-                            <input placeholder="Nombre del instructor" class="input-text" type="text">
+                            <input #nombreInstructor placeholder="Nombre del instructor" class="input-text" type="text">
                         </div>
 
                         <div class="campo">
                             <label>Fecha de inicio</label>
-                            <input class="input-text" type="date">
+                            <input #fechaIncio class="input-text" type="date">
                         </div>
                         
                         <div class="campo">
                             <label>Fecha de fin</label>
-                            <input class="input-text" type="date">
+                            <input #fechaFinal class="input-text" type="date">
                         </div>
 
                     </div>
 
                     <div class="campo">
                         <label>Descripción</label>
-                        <textarea placeholder="Descripción del curso (al menos 30 caracteres)" class="descripcion-textarea input-text"></textarea>
+                        <textarea #descripcion placeholder="Descripción del curso (al menos 30 caracteres)" class="descripcion-textarea input-text"></textarea>
                     </div>
 
-                    <input class="boton" type="submit" value="Agregar">
-                    <p class="error"></p>
+                    <input (click)="agregarCurso()" class="boton" type="button" value="Agregar">
+                    <p #error class="error"></p> 
 
                 </div>
             </fieldset>

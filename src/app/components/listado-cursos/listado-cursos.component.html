@@ -1,10 +1,26 @@
 <main class="contenedor">
-
     <div id="listadocursos" class="listado">
         <h2>Listado de cursos:</h2>
-
         <div class="cursos">
+            <div *ngFor="let curso of cursos" class="curso">
+                <p><span class="curso-caracteristica">Nombre:</span> {{ curso.nombre }}</p>
+                <p><span class="curso-caracteristica">Instructor:</span> {{ curso.instructor }}</p>
+                <p><span class="curso-caracteristica">Fecha de Inicio:</span> {{ curso.fechaInicio | date }}</p>
+                <p><span class="curso-caracteristica">Fecha de Fin:</span> {{ curso.fechaFin | date }}</p>
+                <p><span class="curso-caracteristica">Duración:</span> {{ curso.duracion }} días.</p>
+                <div class="botones">
+                    <button (click)="mostrarDescripcion(curso)" class="boton-general boton-verde">
+                        {{ curso.mostrarDescripcion ? 'Mostrar Menos' : 'Información completa' }}
+                    </button>
+                    <button (click)="eliminarCurso(curso)" class="boton-general boton-rojo">
+                        Eliminar</button>
+                </div>
+                <div class="curso-descripcion" *ngIf="curso.mostrarDescripcion">
+                    <p><span class="curso-caracteristica">Descripción:</span> {{ curso.descripcion }}</p>
+                </div>
+            </div>
         </div>
     </div>
-
 </main>
+
+<!--<button class="boton-general boton-verde">Modificar</button>-->
