@@ -1,4 +1,67 @@
+
 /* Contacto */
 .contacto{
     padding: 1rem;
+    
+}
+
+@media (min-width: 768px) {
+    .contacto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+
+
+.festivo-info {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.festivo-info p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.festivo-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.festivo-info li {
+    background-color: var(--secundario-suave);
+    border: 1px solid #a8d0d0;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.festivo-info h3 {
+    font-size: 1.2rem;
+    color:var(--secundario);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.festivo-date {
+    font-weight: bold;
+    color: #005f5f;
+}
+
+.festivo-name {
+    font-size: 0.9rem;
+    color: #555;
 }

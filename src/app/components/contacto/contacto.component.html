@@ -1,10 +1,40 @@
 <section id="contacto" class="contenedor contacto">
-    <h2>Contacto</h2>
-    <div class="informacion-contacto">
-        <p><strong>Dirección: </strong>Universidad Politécnica Salesiana, Cuenca, Ecuador</p>
-        <p><strong>Teléfono: </strong>+593 93 901 9136</p>
-        <p><strong>Email: </strong>dperaltap2&#64;est.ups.edu.ec</p>
-        <p><strong>Github: </strong> <a href="https://github.com/FepDev25">FepDev25</a></p>
-        <p><strong>Repositorio del proyecto: </strong> <a href="https://github.com/FepDev25/web-cursos-fperalta">web-cursos-fperalta</a></p>
+
+    <div>
+        <h2>Contacto</h2>
+        <div class="informacion-contacto">
+            <p><strong>Dirección: </strong>Universidad Politécnica Salesiana, Cuenca, Ecuador</p>
+            <p><strong>Teléfono: </strong>+593 93 901 9136</p>
+            <p><strong>Email: </strong>dperaltap2&#64;est.ups.edu.ec</p>
+            <p><strong>Github: </strong> <a href="https://github.com/FepDev25">FepDev25</a></p>
+            <p><strong>Repositorio del proyecto: </strong> <a href="https://github.com/FepDev25/web-cursos-fperalta">web-cursos-fperalta</a></p>
+        </div>
     </div>
+
+    <div>
+        <div class="festivo-info">
+            <div *ngIf="festivoHoy">
+                <p>¡Hoy es un día festivo!</p>
+            </div>
+            <div *ngIf="!festivoHoy">
+                <p>Hoy no es un día festivo.</p>
+            </div>
+            <div *ngIf="festivo && festivo.length">
+                <h3>Próximos Días Festivos:</h3>
+                <ul>
+                    <li *ngFor="let holiday of festivo">
+                        <span class="festivo-date">{{ holiday.date }}</span> - 
+                        <span class="festivo-name">{{ holiday.localName }} ({{ holiday.name }})</span>
+                    </li>
+                </ul>
+                <p>Información obtenida de <a href="https://date.nager.at/">date.nager.at</a> </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    
 </section>
+
