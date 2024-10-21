@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FestivosService } from '../../services/festivos.service';
+import { RandomUserService } from '../../services/random-user.service';
 
 @Component({
   selector: 'app-apis',
@@ -12,7 +13,11 @@ import { FestivosService } from '../../services/festivos.service';
 export class ApisComponent implements OnInit{
   festivo: any;
   festivoHoy: boolean = false;
-  constructor (private festivos : FestivosService){}
+  usuario: any;
+  constructor (
+    private festivos : FestivosService,
+    private randomUserService: RandomUserService
+  ){}
 
   ngOnInit(): void {
     this.festivos.esDiaFestivo('AT').subscribe({
@@ -30,6 +35,14 @@ export class ApisComponent implements OnInit{
       },
       error: (error) => {
         console.error('Error al obtener los días festivos', error);
+      }
+    });
+    this.randomUserService.obtenerUsuarioAleatorio().subscribe({
+      next: (data: any) => {
+        this.usuario = data.results[0];
+      },
+      error: (error) => {
+        console.error('Error al obtener un usuario aleatorio', error);
       }
     });
   }

@@ -18,22 +18,12 @@
         </div>
     </div>
 
-    <div class="festivo-info">
-        <div *ngIf="festivoHoy">
-            <p>¡Hoy es un día festivo!</p>
-        </div>
-        <div *ngIf="!festivoHoy">
-            <p>Hoy no es un día festivo.</p>
-        </div>
-        <div *ngIf="festivo && festivo.length">
-            <h3>Próximos Días Festivos:</h3>
-            <ul>
-                <li *ngFor="let holiday of festivo">
-                    <span class="festivo-date">{{ holiday.date }}</span> - 
-                    <span class="festivo-name">{{ holiday.localName }} ({{ holiday.name }})</span>
-                </li>
-            </ul>
-            <p>Información obtenida de <a href="https://date.nager.at/">date.nager.at</a> </p>
-        </div>
-    </div>
+    <div class="usuario-info" *ngIf="usuario">
+        <h3>Usuario Aleatorio:</h3>
+        <p>Nombre: {{ usuario.name.first }} {{ usuario.name.last }}</p>
+        <p>Correo: {{ usuario.email }}</p>
+        <p>País: {{ usuario.location.country }}</p>
+        <img [src]="usuario.picture.medium" alt="Foto del usuario">
+        <p>Información obtenida de <a target="_blank" href="https://randomuser.me/">randomuser.me</a></p>
+      </div>
 </div>
