@@ -23,6 +23,14 @@
     }
 }
 
+@media (min-width: 860px) {
+    .instructores {
+        display: flex;
+        gap: 15px;
+        justify-content: space-around;
+      }
+}
+
 .curso{
     background-color: var(--blanco);
     margin-bottom: 1rem;
@@ -80,11 +88,7 @@
     box-shadow: 0px 0px 4px 0px rgba(54,146,31,1);
   }
   
-  .instructores {
-    display: flex;
-    gap: 15px;
-    justify-content: space-around;
-  }
+  
   
   .instructor {
     text-align: center;

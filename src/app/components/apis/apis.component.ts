@@ -29,6 +29,7 @@ export class ApisComponent implements OnInit{
       }
     });
 
+    
     this.festivos.obtenerDiasFestivos(2024, 'EC').subscribe({
       next: (data: any) => {
         this.festivo = data;
@@ -37,6 +38,8 @@ export class ApisComponent implements OnInit{
         console.error('Error al obtener los días festivos', error);
       }
     });
+
+
     this.randomUserService.obtenerUsuarioAleatorio().subscribe({
       next: (data: any) => {
         this.usuario = data.results[0];
