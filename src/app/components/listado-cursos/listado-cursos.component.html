@@ -20,7 +20,20 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="instructores-recomendados">
+            <h3>Nuestros mejores instructores</h3>
+            <div class="instructores">
+              <div *ngFor="let instructor of instructores" class="instructor">
+                <img [src]="instructor.picture.medium" alt="Foto del instructor" class="foto-instructor">
+                <p><strong>{{ instructor.name.first }} {{ instructor.name.last }}</strong></p>
+                <p>{{ instructor.email }}</p>
+                <p>{{ instructor.location.city }}, {{ instructor.location.country }}</p>
+              </div>
+            </div>
+          </div>
+
+          
     </div>
 </main>
-
-<!--<button class="boton-general boton-verde">Modificar</button>-->

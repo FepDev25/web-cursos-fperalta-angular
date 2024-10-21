@@ -2,6 +2,7 @@ import { Component, NgModule, OnInit } from '@angular/core';
 import { Curso } from '../../models/curso.mode';
 import { CommonModule } from '@angular/common';
 import { CursosService } from '../../services/cursos.service';
+import { RandomUserService } from '../../services/random-user.service';
 
 @Component({
   selector: 'app-listado-cursos',
@@ -12,13 +13,24 @@ import { CursosService } from '../../services/cursos.service';
 })
 export class ListadoCursosComponent implements OnInit {
   cursos : Curso[] = [];
+  instructores: any[] = [];
 
-  constructor(private cursoService: CursosService) {}
+  constructor(private cursoService: CursosService, private randomUserService: RandomUserService) {}
 
   ngOnInit() {
     this.cursos = this.cursoService.obtenerCursos();
     this.cursos.forEach(curso => curso.mostrarDescripcion = false);
+
+    this.randomUserService.obtenerInstructores().subscribe({
+      next: (data) => {
+        this.instructores = data.results;
+      },
+      error: (error) => {
+        console.error('Error al obtener los instructores', error);
+      }
+    });
   }
+
 
   mostrarDescripcion(curso: Curso): void {
     curso.mostrarDescripcion = !curso.mostrarDescripcion;
