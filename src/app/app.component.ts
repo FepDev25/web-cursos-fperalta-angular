@@ -4,13 +4,14 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { CrearCursosComponent } from './components/crear-cursos/crear-cursos.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ListadoCursosComponent } from './components/listado-cursos/listado-cursos.component';
-import { InicioComponent } from './components/inicio/inicio.component';
 import { FormsModule } from '@angular/forms';
+import { ApisComponent } from './components/apis/apis.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, InicioComponent, ContactoComponent, CrearCursosComponent, FooterComponent, ListadoCursosComponent, FormsModule],
+  imports: [RouterOutlet, HeaderComponent, ContactoComponent, CrearCursosComponent, FooterComponent, ListadoCursosComponent, FormsModule, ApisComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

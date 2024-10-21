@@ -1,6 +1,11 @@
 
 /* Listado de cursos */
 
+.listado{
+    margin: 1rem auto;
+    padding: 1.5rem;
+}
+
 .curso:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px var(--secundario-oscuro);

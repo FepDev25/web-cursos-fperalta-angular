@@ -1,0 +1,42 @@
+
+/*Descripcion */
+
+.header-bajo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 1rem auto;
+    padding: 1.5rem;
+}
+
+.img-cursos{
+    width: 70%;
+    height: auto;
+}
+
+@keyframes fadeInDescription {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+  
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+    animation: fadeInDescription 0.5s ease-in-out forwards;
+}
+
+@media (min-width: 768px) {
+    .img-cursos{
+        width: 60%;
+    }
+
+    .descripcion{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+    

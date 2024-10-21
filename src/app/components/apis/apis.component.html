@@ -1,0 +1,39 @@
+<div class="apis contenedor">
+    <div class="festivo-info">
+        <div *ngIf="festivoHoy">
+            <p>¡Hoy es un día festivo!</p>
+        </div>
+        <div *ngIf="!festivoHoy">
+            <p>Hoy no es un día festivo.</p>
+        </div>
+        <div *ngIf="festivo && festivo.length">
+            <h3>Próximos Días Festivos:</h3>
+            <ul>
+                <li *ngFor="let holiday of festivo">
+                    <span class="festivo-date">{{ holiday.date }}</span> - 
+                    <span class="festivo-name">{{ holiday.localName }} ({{ holiday.name }})</span>
+                </li>
+            </ul>
+            <p>Información obtenida de <a target="_blank" href="https://date.nager.at/">date.nager.at</a> </p>
+        </div>
+    </div>
+
+    <div class="festivo-info">
+        <div *ngIf="festivoHoy">
+            <p>¡Hoy es un día festivo!</p>
+        </div>
+        <div *ngIf="!festivoHoy">
+            <p>Hoy no es un día festivo.</p>
+        </div>
+        <div *ngIf="festivo && festivo.length">
+            <h3>Próximos Días Festivos:</h3>
+            <ul>
+                <li *ngFor="let holiday of festivo">
+                    <span class="festivo-date">{{ holiday.date }}</span> - 
+                    <span class="festivo-name">{{ holiday.localName }} ({{ holiday.name }})</span>
+                </li>
+            </ul>
+            <p>Información obtenida de <a href="https://date.nager.at/">date.nager.at</a> </p>
+        </div>
+    </div>
+</div>

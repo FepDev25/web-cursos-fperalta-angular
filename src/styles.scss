@@ -43,6 +43,10 @@ a{text-decoration: none;}
     margin: 0 auto;
     background-color: var(--principal);
     border-radius: 0.6rem;
+
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(54,146,31,1);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(54,146,31,1);
+    box-shadow: 0px 0px 4px 0px rgba(54,146,31,1);
 }
 
 .subtitulo{
@@ -72,10 +76,7 @@ a{text-decoration: none;}
     }
 }
 
-.listado, .formulario{
-    margin: 1rem;
-    padding: 1.5rem;
-}
+
 
 /* Animaciones */
 
